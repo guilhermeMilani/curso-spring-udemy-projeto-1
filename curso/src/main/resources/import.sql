@@ -27,3 +27,7 @@ INSERT INTO tb_product_category (product_id, category_id) VALUES (2, 2);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (3, 3);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (4, 4);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (5, 5);
+
+INSERT INTO tb_order_item (order_id, product_id, quantity, price) VALUES (1,1,2,(SELECT price FROM tb_product WHERE id = 1));
+INSERT INTO tb_order_item (order_id, product_id, quantity, price) VALUES (1,2,4,(SELECT price FROM tb_product WHERE id = 2));
+INSERT INTO tb_order_item (order_id, product_id, quantity, price) VALUES (3,3,1,(SELECT price FROM tb_product WHERE id = 3));
